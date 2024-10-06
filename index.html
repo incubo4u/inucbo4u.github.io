@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incubo4u | Software Engineer</title>
+    <!-- FontAwesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Fira Code", monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #1b1b1b; /* Darker background */
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Flex container to ensure footer is at the bottom */
+      #container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding: 40px 20px;
+        background-color: #222;
+        color: #f4f4f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        position: relative;
+        z-index: 10;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #deddd0; /* New color for "Hi, I'm Incubo4u" */
+      }
+
+      .contact-box {
+        padding: 4px 12px; /* Reduced top and bottom padding */
+        border-radius: 10px; /* Slightly smaller radius */
+        background-color: #333;
+        color: #b0b0b0;
+        text-align: left; /* Left-align text */
+        font-size: 0.85em; /* Smaller text size */
+        display: inline-block; /* Make the box fit the text */
+        line-height: 1.4;
+      }
+
+      .contact-box p {
+        margin: 2px 0; /* Smaller margin between text lines */
+      }
+
+      .contact-box a {
+        color: #b0b0b0;
+        text-decoration: none;
+      }
+
+      .contact-box .icons a {
+        margin-right: 10px; /* Space between icons */
+        color: #b0b0b0;
+      }
+
+      .contact-box .icons a:hover {
+        color: #f4f4f9; /* Highlight on hover */
+      }
+
+      /* Post Section Styling */
+      .post {
+        width: 100%; /* Match the header width */
+        max-width: 1200px; /* Limit the maximum width to make it readable */
+        margin: 0 auto; /* Center the post */
+        padding: 40px 20px;
+        background-color: #1b1b1b; /* Flat design background */
+        border-bottom: 1px solid #333; /* Divider between posts */
+      }
+
+      .post-title {
+        font-size: 1.5em;
+        margin: 0;
+        color: #b0b0b0; /* Title in a different color */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .post-title span {
+        font-size: 0.65em; /* Smaller date */
+        color: #b0b0b0; /* Less visible date color */
+        margin-left: 20px;
+      }
+
+      .post-content {
+        margin-top: 20px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #deddd0; /* Text color */
+      }
+
+      /* Footer styling */
+      footer {
+        text-align: left; /* Align footer text to the left */
+        padding: 20px;
+        color: #999999; /* Lighter color for less visibility */
+        margin-top: auto; /* Push footer to the bottom */
+      }
+
+      pre {
+        white-space: pre; /* Preserve whitespace */
+        font-family: "Fira Code", monospace; /* Monospace font for ASCII art */
+        color: inherit; /* Inherit color from the footer */
+        font-size: 0.8em; /* Adjust font size if needed */
+        line-height: 1.2; /* Adjust line height for better spacing */
+      }
+
+      /* Responsive Design for mobile */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column; /* Stack title and contact box */
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .contact-box {
+          font-size: 0.85em;
+          margin-top: 20px;
+        }
+
+        .post {
+          padding: 20px;
+        }
+
+        .post-title {
+          font-size: 1.2em;
+        }
+
+        .post-content {
+          font-size: 1em;
+        }
+      }
+
+      /* Extra small devices (phones in portrait mode) */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.8em;
+        }
+
+        .contact-box {
+          font-size: 0.75em;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Hi, I'm Incubo4u</h1>
+        <div class="contact-box">
+          <p>Software Engineer @ Software Mansion</p>
+          <p>Master's Student at Warsaw University of Technology</p>
+          <div class="icons">
+            <a
+              href="https://github.com/incubo4u"
+              target="_blank"
+              class="fab fa-github"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mikolajkozakiewicz/"
+              target="_blank"
+              class="fab fa-linkedin"
+            ></a>
+            <a
+              href="mailto:mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com"
+              >mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="post">
+        <div class="post-title">
+          > Bonjour!
+          <span>October 4, 2024</span>
+        </div>
+        <div class="post-content">
+          <p>
+            This page is a work in progress where I plan to list some of the
+            books I've read and believe are worth sharing, as well as some
+            random thoughts I need to write down somewhere.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <pre>
+ \|/          (__)    
+      `\------(oo)
+        ||    (__)
+        ||w--||     \|/
+    \|/
+      </pre>
+    </footer>
+  </body>
+</html>
