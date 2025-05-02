@@ -131,6 +131,47 @@
         line-height: 1.2; /* Adjust line height for better spacing */
       }
 
+
+      /* Code block styling */
+      pre code {
+        display: inline-block;            /* Shrink-wrap width */
+        background-color: #2d2d2d;
+        color: #f8f8f2;
+        padding: 12px 16px;
+        border-radius: 8px;
+        max-width: 100%;
+        overflow-x: auto;
+        font-family: "Fira Code", monospace;
+        font-size: 0.9em;
+        line-height: 1.5;
+        border: 1px solid #444;
+        white-space: pre;                /* Preserve formatting */
+      }
+
+      /* Scrollbar for code blocks (optional and modern browsers only) */
+      pre code::-webkit-scrollbar {
+        height: 6px;
+      }
+      pre code::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+      }
+      pre code::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      /* Link styling (orange) */
+      a {
+        color: orange;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #ffa500;
+      }
+
+
       /* Responsive Design for mobile */
       @media (max-width: 768px) {
         header {
@@ -217,7 +258,7 @@
 
 <div class="post">
   <div class="post-title">
-    > Ptr dereference confusion
+    > Ptr dereference sugar confusion
     <span>May 2, 2025</span>
   </div>
   <div class="post-content">
@@ -225,30 +266,37 @@
       I will start with a disclaimer that this is just my opinion, and I encourage you to disagree with me or even better, explain to me why you think I'm wrong if you do.
     </p>
 
+        <br>
     <p>
       So let's keep this short.<br>
       During my adventure with low-level languages, I saw a lot of people confused by pointers.<br>
       They sound scary, they are not present in many higher-level languages, and sometimes they cause problems.<br>
       But the reality, as you probably know, is that even if sometimes dealing with pointers is hard (especially if you are dealing with some obscure pointer arithmetic or using some forgotten-by-God trick to achieve something using pointers), most of the time pointers are not scary at all.
-    </p>
-
+  </p>
+        <br>
     <p>
       But I think the syntax is pretty awkward, at least in C or C++.
     </p>
 
     <p>
+                  <br>
+
       <a href="https://beej.us/guide/bgc/html/split/pointers-iii-pointers-to-pointers-and-more.html#pointers-iii-pointers-to-pointers-and-more" target="_blank">
         examples -> pointers-iii-pointers-to-pointers-and-more (beej.us C book)
       </a>
+
     </p>
 
+                  <br>
     <p>
       But things are changing in the modern languages that are rising in popularity, like Zig.<br>
       I think the Zig syntax for dereferencing is much better than the C one:
     </p>
 
+                  <br>
     <pre><code class="language-zig">ptr.*</code></pre>
 
+                  <br>
     <p>
       But still, I'm pretty pissed off by one syntax sugar that is embedded in almost all languages I used in my fairly short adventure:
     </p>
@@ -257,25 +305,26 @@
       Accessing a field of a struct/class through a pointer.
     </p>
 
-    <pre><code class="language-zig">// Zig
-ptr.x.*
-</code></pre>
+                  <br>
+    <pre><code class="language-zig">ptr.x.* // Zig</code></pre>
 
-    <pre><code class="language-c">// C/C++
-ptr->x
-</code></pre>
+    <pre><code class="language-c">ptr->x // C/C++</code></pre>
+                          <br>
 
     <p>
       Why? Why can't it just be more explicit?
     </p>
 
+                  <br>
     <pre><code class="language-c">(*ptr).x</code></pre>
 
+                  <br>
     <p>
       I mean, I know that technically we can use the above syntax, but no one does.<br>
       Wouldn't it be much easier, especially for beginners, to use the explicit form instead of the language automatically dereferencing the pointer?
     </p>
 
+        <br>
     <p>
       Maybe I'm wrong and this is not such a big deal, but I saw so many people being confused about it that I just think this is not worth it.
     </p>
