@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Incubo4u</title>
-    <!-- FontAwesome CDN for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -134,7 +133,7 @@
 
       /* Code block styling */
       pre code {
-        display: inline-block;            /* Shrink-wrap width */
+        display: inline-block;          /* Shrink-wrap width */
         background-color: #2d2d2d;
         color: #f8f8f2;
         padding: 12px 16px;
@@ -145,7 +144,7 @@
         font-size: 0.9em;
         line-height: 1.5;
         border: 1px solid #444;
-        white-space: pre;                /* Preserve formatting */
+        white-space: pre;               /* Preserve formatting */
       }
 
       /* Scrollbar for code blocks (optional and modern browsers only) */
@@ -242,101 +241,84 @@
 
       <div class="post">
         <div class="post-title">
-          > Bonjour!
-          <span>October 4, 2024</span>
+          > Ptr dereference sugar confusion
+          <span>May 2, 2025</span>
         </div>
         <div class="post-content">
           <p>
-            This page is a work in progress where I plan to list some of the
-            books I've read and believe are worth sharing, as well as some
-            random thoughts I need to write down somewhere.
+            I will start with a disclaimer that this is just my opinion, and I encourage you to disagree with me or even better, explain to me why you think I'm wrong if you do.
+          </p>
+
+          <br>
+          <p>
+            So let's keep this short.<br>
+            During my adventure with low-level languages, I saw a lot of people confused by pointers.<br>
+            They sound scary, they are not present in many higher-level languages, and sometimes they cause problems.<br>
+            But the reality, as you probably know, is that even if sometimes dealing with pointers is hard (especially if you are dealing with some obscure pointer arithmetic or using some forgotten-by-God trick to achieve something using pointers), most of the time pointers are not scary at all.
+          </p>
+          <br>
+          <p>
+            But I think the syntax is pretty awkward, at least in C or C++.
+          </p>
+
+          <p>
+            <br>
+            <a href="https://beej.us/guide/bgc/html/split/pointers-iii-pointers-to-pointers-and-more.html#pointers-iii-pointers-to-pointers-and-more" target="_blank">
+              examples -> pointers-iii-pointers-to-pointers-and-more (beej.us C book)
+            </a>
+          </p>
+
+          <br>
+          <p>
+            But things are changing in the modern languages that are rising in popularity, like Zig.<br>
+            I think the Zig syntax for dereferencing is much better than the C one:
+          </p>
+
+          <br>
+          <pre><code class="language-zig">ptr.*</code></pre>
+
+          <br>
+          <p>
+            But still, I'm pretty pissed off by one syntax sugar that is embedded in almost all languages I used in my fairly short adventure:
+          </p>
+
+          <p>
+            Accessing a field of a struct/class through a pointer.
+          </p>
+
+          <br>
+          <pre><code class="language-zig">ptr.x.* // Zig</code></pre>
+
+          <pre><code class="language-c">ptr->x // C/C++</code></pre>
+          <br>
+
+          <p>
+            Why? Why can't it just be more explicit?
+          </p>
+
+          <br>
+          <pre><code class="language-c">(*ptr).x</code></pre>
+
+          <br>
+          <p>
+            I mean, I know that technically we can use the above syntax, but no one does.<br>
+            Wouldn't it be much easier, especially for beginners, to use the explicit form instead of the language automatically dereferencing the pointer?
+          </p>
+
+          <br>
+          <p>
+            Maybe I'm wrong and this is not such a big deal, but I saw so many people being confused about it that I just think this is not worth it.
           </p>
         </div>
       </div>
     </div>
 
-
-<div class="post">
-  <div class="post-title">
-    > Ptr dereference sugar confusion
-    <span>May 2, 2025</span>
-  </div>
-  <div class="post-content">
-    <p>
-      I will start with a disclaimer that this is just my opinion, and I encourage you to disagree with me or even better, explain to me why you think I'm wrong if you do.
-    </p>
-
-        <br>
-    <p>
-      So let's keep this short.<br>
-      During my adventure with low-level languages, I saw a lot of people confused by pointers.<br>
-      They sound scary, they are not present in many higher-level languages, and sometimes they cause problems.<br>
-      But the reality, as you probably know, is that even if sometimes dealing with pointers is hard (especially if you are dealing with some obscure pointer arithmetic or using some forgotten-by-God trick to achieve something using pointers), most of the time pointers are not scary at all.
-  </p>
-        <br>
-    <p>
-      But I think the syntax is pretty awkward, at least in C or C++.
-    </p>
-
-    <p>
-                  <br>
-
-      <a href="https://beej.us/guide/bgc/html/split/pointers-iii-pointers-to-pointers-and-more.html#pointers-iii-pointers-to-pointers-and-more" target="_blank">
-        examples -> pointers-iii-pointers-to-pointers-and-more (beej.us C book)
-      </a>
-
-    </p>
-
-                  <br>
-    <p>
-      But things are changing in the modern languages that are rising in popularity, like Zig.<br>
-      I think the Zig syntax for dereferencing is much better than the C one:
-    </p>
-
-                  <br>
-    <pre><code class="language-zig">ptr.*</code></pre>
-
-                  <br>
-    <p>
-      But still, I'm pretty pissed off by one syntax sugar that is embedded in almost all languages I used in my fairly short adventure:
-    </p>
-
-    <p>
-      Accessing a field of a struct/class through a pointer.
-    </p>
-
-                  <br>
-    <pre><code class="language-zig">ptr.x.* // Zig</code></pre>
-
-    <pre><code class="language-c">ptr->x // C/C++</code></pre>
-                          <br>
-
-    <p>
-      Why? Why can't it just be more explicit?
-    </p>
-
-                  <br>
-    <pre><code class="language-c">(*ptr).x</code></pre>
-
-                  <br>
-    <p>
-      I mean, I know that technically we can use the above syntax, but no one does.<br>
-      Wouldn't it be much easier, especially for beginners, to use the explicit form instead of the language automatically dereferencing the pointer?
-    </p>
-
-        <br>
-    <p>
-      Maybe I'm wrong and this is not such a big deal, but I saw so many people being confused about it that I just think this is not worth it.
-    </p>
-  </div>
-</div>
-
     <footer>
       <pre>
- \|/          (__)    
-      `\------(oo)
-        ||    (__)
-        ||w--||     \|/
+ \|/           (__)   
+    `\------(oo)
+      ||   (__)
+      ||w--||     \|/
     \|/
       </pre>
     </footer>
