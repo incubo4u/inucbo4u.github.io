@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <style>
       /* Base Styles */
       * {
@@ -21,8 +21,8 @@
         font-family: "Fira Code", monospace;
         margin: 0;
         padding: 0;
-        background-color: #1b1b1b; /* Darker background */
-        color: #333;
+        background-color: #0b1a2b; /* Abyss Blue - Darker blue-black */
+        color: #d4d4d4; /* Light grey for general text */
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -37,7 +37,7 @@
 
       header {
         padding: 40px 20px;
-        background-color: #222;
+        background-color: #122840; /* Slightly lighter dark blue for header */
         color: #f4f4f9;
         display: flex;
         justify-content: space-between;
@@ -50,13 +50,13 @@
       h1 {
         font-size: 2.5em;
         margin: 0;
-        color: #deddd0; /* New color for "Hi, I'm Incubo4u" */
+        color: #8ed2ff; /* Lighter blue for "Hi, I'm Incubo4u" (akin to VS Code's variable color) */
       }
 
       .contact-box {
         padding: 4px 12px; /* Reduced top and bottom padding */
         border-radius: 10px; /* Slightly smaller radius */
-        background-color: #333;
+        background-color: #1c3857; /* Darker blue for contact box */
         color: #b0b0b0;
         text-align: left; /* Left-align text */
         font-size: 0.85em; /* Smaller text size */
@@ -88,14 +88,14 @@
         max-width: 1200px; /* Limit the maximum width to make it readable */
         margin: 0 auto; /* Center the post */
         padding: 40px 20px;
-        background-color: #1b1b1b; /* Flat design background */
-        border-bottom: 1px solid #333; /* Divider between posts */
+        background-color: #0b1a2b; /* Abyss Blue - Same as body for flat design */
+        border-bottom: 1px solid #1c3857; /* Darker blue divider between posts */
       }
 
       .post-title {
         font-size: 1.5em;
         margin: 0;
-        color: #b0b0b0; /* Title in a different color */
+        color: #8ed2ff; /* Title in a lighter blue */
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -103,7 +103,7 @@
 
       .post-title span {
         font-size: 0.65em; /* Smaller date */
-        color: #b0b0b0; /* Less visible date color */
+        color: #5aa6d9; /* Less visible date color */
         margin-left: 20px;
       }
 
@@ -111,14 +111,14 @@
         margin-top: 20px;
         font-size: 1.1em;
         line-height: 1.6;
-        color: #deddd0; /* Text color */
+        color: #d4d4d4; /* Text color - light grey */
       }
 
       /* Footer styling */
       footer {
         text-align: left; /* Align footer text to the left */
         padding: 20px;
-        color: #999999; /* Lighter color for less visibility */
+        color: #5aa6d9; /* Lighter blue for less visibility */
         margin-top: auto; /* Push footer to the bottom */
       }
 
@@ -130,12 +130,13 @@
         line-height: 1.2; /* Adjust line height for better spacing */
       }
 
-
       /* Code block styling */
+      /* Note: This styling is for `pre code` tags directly in your HTML.
+         It will NOT apply to the embedded Gist. */
       pre code {
-        display: inline-block;          /* Shrink-wrap width */
-        background-color: #2d2d2d;
-        color: #f8f8f2;
+        display: inline-block; /* Shrink-wrap width */
+        background-color: #0d1117; /* Darker background for code blocks (GitHub dark) */
+        color: #e6edf3; /* Light text for code */
         padding: 12px 16px;
         border-radius: 8px;
         max-width: 100%;
@@ -143,8 +144,8 @@
         font-family: "Fira Code", monospace;
         font-size: 0.9em;
         line-height: 1.5;
-        border: 1px solid #444;
-        white-space: pre;               /* Preserve formatting */
+        border: 1px solid #30363d; /* Darker border */
+        white-space: pre; /* Preserve formatting */
       }
 
       /* Scrollbar for code blocks (optional and modern browsers only) */
@@ -152,24 +153,23 @@
         height: 6px;
       }
       pre code::-webkit-scrollbar-thumb {
-        background: #888;
+        background: #4a5a6a; /* Darker scrollbar thumb */
         border-radius: 3px;
       }
       pre code::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: #6a7b8c; /* Lighter on hover */
       }
 
       /* Link styling (orange) */
       a {
-        color: orange;
+        color: #5aa6d9; /* Light blue for links (consistent with theme) */
         text-decoration: none;
       }
 
       a:hover {
         text-decoration: underline;
-        color: #ffa500;
+        color: #8ed2ff; /* Brighter blue on hover */
       }
-
 
       /* Responsive Design for mobile */
       @media (max-width: 768px) {
@@ -231,36 +231,37 @@
               target="_blank"
               class="fab fa-linkedin"
             ></a>
-            <a
-              href="mailto:mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com"
+            <a href="mailto:mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com"
               >mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com</a
             >
           </div>
         </div>
       </header>
 
-<div class="post">
+      <div class="post">
         <div class="post-title">
           > Stop Auto-Lowering My Mic!
           <span>July 6, 2025</span>
         </div>
         <div class="post-content">
           <p>
-            I was so frustrated with my Mac automatically lowering my mic volume, it drove me crazy! If you're experiencing the same, here's the quick fix: create a `launchd` service with an `osascript` loop to constantly set your input volume to 100%.
+            I was so frustrated with my Mac automatically lowering my mic
+            volume, it drove me crazy! If you're experiencing the same, here's
+            the quick fix: create a `launchd` service with an `osascript` loop
+            to constantly set your input volume to 100%.
           </p>
           <script src="https://gist.github.com/incubo4u/3b5fc7a3979043e0e3e43a4f40791dd6.js"></script>
         </div>
       </div>
     </div>
-       
 
     <footer>
       <pre>
- \|/        (__)   
-    `\------(oo)
-      ||   (__)
-      ||w--||     \|/
-    \|/
+ \|/     (__) 
+   `\------(oo)
+     ||   (__)
+     ||w--||   \|/
+   \|/
       </pre>
     </footer>
   </body>
