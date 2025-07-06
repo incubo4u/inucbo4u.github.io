@@ -1,343 +1,65 @@
+<!-- vim: set nomodeline: -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Incubo4u</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link href="https://cdn.rawgit.com/Killercodes/281792c423a4fe5544d9a8d36a4430f2/raw/42e5b91a60ea5e25b7bb42c0a315d9e740c92f0/GistDarkCode.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <style>
-      /* Base Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border;
-      }
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/Users/mikolajkozakiewicz/Documents/sync/9-tenebra/test.md</title>
+<meta name="colorscheme" content="tokyonight-night"></meta>
+<style>
+* {font-family: monospace}
+body {background-color: #1a1b26; color: #c0caf5}
+.-none {}
+.-spell {}
+.String {color: #9ece6a}
+.Whitespace {color: #3b4261}
+.-markup-heading-1-markdown {color: #7aa2f7; font-weight: bold}
+.-markup-heading-2-markdown {color: #e0af68; font-weight: bold}
+.-punctuation-special-markdown {color: #ff9e64}
+</style>
+</head>
+<body style="display: flex">
+<pre>
+<span class="-markup-heading-1-markdown"><span class="-spell">===============================================================================
+                               Incubo4u</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span><span class="Whitespace">·</span>
+</span><span class="-markup-heading-1-markdown">===============================================================================</span>
 
-      body {
-        font-family: "Fira Code", monospace;
-        margin: 0;
-        padding: 0;
-        background-color: #0b1a2b; /* Abyss Blue - Darker blue-black */
-        color: #d4d4d4; /* Light grey for general text */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
+<span class="-spell">Software Engineer at Revolut
+Master's Student at Warsaw University of Technology</span>
 
-      /* Flex container to ensure footer is at the bottom */
-      #container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
+<span class="-spell">GitHub     : https://github.com/incubo4u
+LinkedIn   : https://www.linkedin.com/in/mikolajkozakiewicz/
+Email      : mikolaj.kozakiewicz.999+incubo4u@gmail.com</span>
 
-      header {
-        padding: 40px 20px;
-        background-color: #122840; /* Slightly lighter dark blue for header */
-        color: #f4f4f9;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-        position: relative;
-        z-index: 10;
-      }
+<span class="-punctuation-special-markdown">-------------------------------------------------------------------------------
+</span>
+<span class="-none"><span class="-punctuation-special-markdown">&gt;</span><span class="-none"><span class="-punctuation-special-markdown">&gt; </span><span class="-spell">Stop Auto-Lowering My Mic!
+<span class="-punctuation-special-markdown">&gt;&gt; </span>July 6, 2025</span>
+</span></span>
+<span class="-spell">I was completely frustrated with my Mac constantly lowering the microphone<span class="Whitespace">·</span>
+input volume. It kept messing with my calls, and pretty much<span class="Whitespace">·</span>
+everything audio-related. It drove me crazy.</span>
 
-      h1 {
-        font-size: 2.5em;
-        margin: 0;
-        color: #8ed2ff; /* Lighter blue for "Hi, I'm Incubo4u" (akin to VS Code's variable color) */
-      }
+<span class="-spell">After some trial and error, I found a simple and effective (and brutal haha ) fix:</span>
 
-      .contact-box {
-        padding: 4px 12px; /* Reduced top and bottom padding */
-        border-radius: 10px; /* Slightly smaller radius */
-        background-color: #1c3857; /* Darker blue for contact box */
-        color: #b0b0b0;
-        text-align: left; /* Left-align text */
-        font-size: 0.85em; /* Smaller text size */
-        display: inline-block; /* Make the box fit the text */
-        line-height: 1.4;
-      }
+<span class="String">    - Create a launchd service to run an osascript loop to force the input volume to stay at 100%
 
-      .contact-box p {
-        margin: 2px 0; /* Smaller margin between text lines */
-      }
+</span><span class="-spell">Now it silently runs in the background, and my mic volume stays where I want it.
+No more surprises during meetings.</span>
 
-      .contact-box a {
-        color: #b0b0b0;
-        text-decoration: none;
-      }
+<span class="-spell">Peace restored.</span>
 
-      .contact-box .icons a {
-        margin-right: 10px; /* Space between icons */
-        color: #b0b0b0;
-      }
+<span class="-markup-heading-2-markdown"><span class="-spell">source    : https://gist.github.com/incubo4u/3b5fc7a3979043e0e3e43a4f40791dd6</span>
+</span><span class="-markup-heading-2-markdown">-------------------------------------------------------------------------------</span>
 
-      .contact-box .icons a:hover {
-        color: #f4f4f9; /* Highlight on hover */
-      }
 
-      /* Post Section Styling */
-      .post {
-        width: 100%; /* Match the header width */
-        max-width: 1200px; /* Limit the maximum width to make it readable */
-        margin: 0 auto; /* Center the post */
-        padding: 40px 20px;
-        background-color: #0b1a2b; /* Abyss Blue - Same as body for flat design */
-        border-bottom: 1px solid #1c3857; /* Darker blue divider between posts */
-      }
 
-      .post-title {
-        font-size: 1.5em;
-        margin: 0;
-        color: #8ed2ff; /* Title in a lighter blue */
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
+<span class="String">         \|/       (__)
+<span class="-punctuation-special-markdown">    </span>       `\------(oo)
+<span class="-punctuation-special-markdown">    </span>         ||    (__)
+<span class="-punctuation-special-markdown">    </span>         ||w--||   \|/
+<span class="-punctuation-special-markdown">    </span>       \|/
 
-      .post-title span {
-        font-size: 0.65em; /* Smaller date */
-        color: #5aa6d9; /* Less visible date color */
-        margin-left: 20px;
-      }
-
-      .post-content {
-        margin-top: 20px;
-        font-size: 1.1em;
-        line-height: 1.6;
-        color: #d4d4d4; /* Text color - light grey */
-      }
-
-      /* Footer styling */
-      footer {
-        text-align: left; /* Align footer text to the left */
-        padding: 20px;
-        color: #5aa6d9; /* Lighter blue for less visibility */
-        margin-top: auto; /* Push footer to the bottom */
-      }
-
-      pre {
-        white-space: pre; /* Preserve whitespace */
-        font-family: "Fira Code", monospace; /* Monospace font for ASCII art */
-        color: inherit; /* Inherit color from the footer */
-        font-size: 0.8em; /* Adjust font size if needed */
-        line-height: 1.2; /* Adjust line height for better spacing */
-      }
-
-      /* Code block styling (for self-hosted code if you eventually switch from Gist) */
-      pre code {
-        display: inline-block;
-        background-color: #0d1117;
-        color: #e6edf3;
-        padding: 12px 16px;
-        border-radius: 8px;
-        max-width: 100%;
-        overflow-x: auto;
-        font-family: "Fira Code", monospace;
-        font-size: 0.9em;
-        line-height: 1.5;
-        border: 1px solid #30363d;
-        white-space: pre;
-      }
-
-      pre code::-webkit-scrollbar {
-        height: 6px;
-      }
-      pre code::-webkit-scrollbar-thumb {
-        background: #4a5a6a;
-        border-radius: 3px;
-      }
-      pre code::-webkit-scrollbar-thumb:hover {
-        background: #6a7b8c;
-      }
-
-      /* Link styling (orange) */
-      a {
-        color: #5aa6d9; /* Light blue for links (consistent with theme) */
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-        color: #8ed2ff; /* Brighter blue on hover */
-      }
-
-      /* --- Gist Specific Styling Attempts --- */
-
-      /* Overall Gist container */
-      .gist {
-        background-color: #0d1117 !important; /* Darker background, like VS Code's editor */
-        border: 1px solid #30363d !important; /* Darker border */
-        border-radius: 8px !important;
-        margin-bottom: 20px !important; /* Standardize margin */
-        font-family: "Fira Code", monospace !important; /* Apply your font */
-      }
-
-      /* Gist header/meta area */
-      .gist .gist-file {
-        border-color: #30363d !important; /* Match border color */
-        background-color: #122840 !important; /* Slightly lighter header for distinction */
-        color: #e6edf3 !important; /* Lighter text for header */
-        font-family: "Fira Code", monospace !important;
-      }
-
-      /* Gist header link/meta info */
-      .gist .gist-meta {
-        background-color: #122840 !important;
-        color: #b0b0b0 !important;
-        font-family: "Fira Code", monospace !important;
-        border-top: 1px solid #30363d !important; /* Add a top border if needed */
-        padding: 5px 10px !important; /* Adjust padding */
-      }
-
-      .gist .gist-meta a {
-        color: #5aa6d9 !important; /* Your link color */
-        text-decoration: none !important;
-      }
-
-      .gist .gist-meta a:hover {
-        color: #8ed2ff !important; /* Your hover link color */
-        text-decoration: underline !important;
-      }
-
-      /* Line numbers (gutter) */
-      .gist .linenums {
-        background-color: #0d1117 !important; /* Match code background */
-        color: #4a5a6a !important; /* Dimmer color for line numbers */
-        border-right: 1px solid #30363d !important; /* Separator */
-      }
-
-      /* Code content area */
-      .gist .gist-data {
-        background-color: #0d1117 !important; /* Darker background for code */
-        color: #e6edf3 !important; /* Main code text color */
-        border-bottom: none !important; /* Remove bottom border if present */
-      }
-
-      /* Actual code lines */
-      .gist .blob-code-inner {
-        color: #e6edf3 !important; /* Ensure main code text color */
-        background-color: #0d1117 !important; /* Ensure background consistency */
-        font-family: "Fira Code", monospace !important; /* Apply your font */
-      }
-
-      /* Highlighted line (if Gist has it) */
-      .gist .highlight {
-        background-color: #2a3d53 !important; /* A subtle highlight background */
-      }
-
-      /* Scrollbar for Gist (if it gets its own) */
-      .gist ::-webkit-scrollbar {
-        height: 6px;
-        width: 6px; /* Also for vertical scroll if needed */
-      }
-      .gist ::-webkit-scrollbar-thumb {
-        background: #4a5a6a;
-        border-radius: 3px;
-      }
-      .gist ::-webkit-scrollbar-thumb:hover {
-        background: #6a7b8c;
-      }
-
-      /* Responsive Design for mobile */
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column; /* Stack title and contact box */
-          text-align: center;
-        }
-
-        h1 {
-          font-size: 2em;
-        }
-
-        .contact-box {
-          font-size: 0.85em;
-          margin-top: 20px;
-        }
-
-        .post {
-          padding: 20px;
-        }
-
-        .post-title {
-          font-size: 1.2em;
-        }
-
-        .post-content {
-          font-size: 1em;
-        }
-      }
-
-      /* Extra small devices (phones in portrait mode) */
-      @media (max-width: 480px) {
-        h1 {
-          font-size: 1.8em;
-        }
-
-        .contact-box {
-          font-size: 0.75em;
-          padding: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <h1>Hi, I'm Incubo4u</h1>
-        <div class="contact-box">
-          <p>Software Engineer @ Revolut</p>
-          <p>Master's Student at Warsaw University of Technology</p>
-          <div class="icons">
-            <a
-              href="https://github.com/incubo4u"
-              target="_blank"
-              class="fab fa-github"
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/mikolajkozakiewicz/"
-              target="_blank"
-              class="fab fa-linkedin"
-            ></a>
-            <a href="mailto:mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com"
-              >mikolaj&#46;kozakiewicz&#46;999&#64;gmail&#46;com</a
-            >
-          </div>
-        </div>
-      </header>
-
-      <div class="post">
-        <div class="post-title">
-          > Stop Auto-Lowering My Mic!
-          <span>July 6, 2025</span>
-        </div>
-        <div class="post-content">
-          <p>
-            I was so frustrated with my Mac automatically lowering my mic
-            volume, it drove me crazy! If you're experiencing the same, here's
-            the quick fix: create a `launchd` service with an `osascript` loop
-            to constantly set your input volume to 100%.
-          </p>
-          <script src="https://gist.github.com/incubo4u/3b5fc7a3979043e0e3e43a4f40791dd6.js"></script>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <pre>
- \|/       (__) 
-   `\------(oo)
-     ||    (__)
-     ||w--||   \|/
-   \|/
-      </pre>
-    </footer>
-  </body>
+</span>
+</pre>
+</body>
 </html>
