@@ -3,18 +3,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>/Users/mikolajkozakiewicz/Documents/sync-incubo/9-tenebra/999-My-Page/mypage.md</title>
+<title>/Users/mikolaj/Documents/sync-incubo/9-tenebra/999-My-Page/mypage.md</title>
 <meta name="colorscheme" content="tokyonight-night"></meta>
 <style>
 * {font-family: monospace}
 body {background-color: #1a1b26; color: #c0caf5}
-.-markup-heading-2-markdown {font-weight: bold; color: #e0af68}
-.-none {}
-.-punctuation-special-markdown {color: #ff9e64}
-.Whitespace {color: #3b4261}
 .-spell {}
+.-punctuation-special-markdown {color: #ff9e64}
 .String {color: #9ece6a}
+.Whitespace {color: #3b4261}
 .-markup-heading-1-markdown {font-weight: bold; color: #7aa2f7}
+.-none {}
+.-markup-heading-2-markdown {font-weight: bold; color: #e0af68}
 </style>
 </head>
 <body style="display: flex">
@@ -40,6 +40,50 @@ LinkedIn   : https://www.linkedin.com/in/mikolajkozakiewicz</span>
 
 <span class="-punctuation-special-markdown">-------------------------------------------------------------------------------
 </span>
+<span class="-none"><span class="-punctuation-special-markdown">&gt;</span><span class="-none"><span class="-punctuation-special-markdown">&gt; </span><span class="-spell">Signal Messages Autodelete (The Brutal Way)
+<span class="-punctuation-special-markdown">&gt;&gt; </span>September 2, 2025</span>
+</span></span>
+<span class="-spell">I’ve always loved disappearing messages, but their implementation feels a bit
+incomplete When you set a delete timer, it usually starts ticking only after
+the recipient reads the message. Makes sense... but what if I want a message to
+disappear even if nobody opens it?</span><span class="Whitespace">·</span>
+
+<span class="-spell">Signal is open source (♥), which means the client is fully in our hands.
+So let’s add that feature ourselves (⌐■_■)</span>
+
+<span class="String">    disclaimer: this is just for fun. don’t use my diff in production,
+<span class="-punctuation-special-markdown">    </span>it’s probably vulnerable or at least not well tested
+
+</span><span class="-spell">Alright.</span>
+
+<span class="-spell">First, I added basic slash command support:</span>
+
+<span class="String">    * Created SlashCommandProcessor to parse commands.
+<span class="-punctuation-special-markdown">    </span>* Added SlashCommandListener so ComposeText can talk to
+<span class="-punctuation-special-markdown">    </span>  ConversationFragment.
+<span class="-punctuation-special-markdown">    </span>* Modified ComposeText to detect and forward slash commands before
+<span class="-punctuation-special-markdown">    </span>  sending.
+
+</span><span class="-spell">Then I added two commands:</span>
+
+<span class="String">    * /killme Command:
+<span class="-punctuation-special-markdown">    </span>  * Added MessageUnsendUtil for message deletion logic.
+<span class="-punctuation-special-markdown">    </span>  * Updated SlashCommandProcessor to recognize /killme.
+<span class="-punctuation-special-markdown">    </span>  * Modified ConversationFragment to trigger the unsend action on all
+<span class="-punctuation-special-markdown">    </span>    my recent messages.
+
+    * /autokill Command:
+<span class="-punctuation-special-markdown">    </span>  * Created AutoKillManager to track auto-deletion timers per thread.
+<span class="-punctuation-special-markdown">    </span>  * Updated SlashCommandProcessor to parse /autokill &lt;seconds&gt;.
+<span class="-punctuation-special-markdown">    </span>  * Modified ConversationFragment to enable/disable timers and schedule
+<span class="-punctuation-special-markdown">    </span>    message deletion immediately after sending.
+
+</span><span class="-spell">Time to test aka run gradle &amp; pray.
+mission achieved</span>
+
+<span class="-markup-heading-2-markdown"><span class="-spell">source    : https://github.com/incubo4u/Signal4Fun</span>
+</span><span class="-markup-heading-2-markdown">-------------------------------------------------------------------------------</span>
+
 <span class="-none"><span class="-punctuation-special-markdown">&gt;</span><span class="-none"><span class="-punctuation-special-markdown">&gt; </span><span class="-spell">Gmail Tag Feature Is Great  (Until It Locks You Out)
 <span class="-punctuation-special-markdown">&gt;&gt; </span>August 15, 2025</span>
 </span></span>
@@ -52,7 +96,7 @@ adding '+something' before the '@' in your address.</span>
 leaked or sold your address by checking the 'To:' field.</span>
 
 <span class="-spell">From Gmail’s perspective:</span>
-
+<span class="Whitespace">·</span>
 <span class="String">    name+tag@gmail.com
 <span class="-punctuation-special-markdown">    </span>n.a.m.e+othertag@gmail.com
 <span class="-punctuation-special-markdown">    </span>name@gmail.com
