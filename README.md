@@ -1,3 +1,3 @@
-An (ironic) attempt to write down random things I like without JS, frameworks, or anything fancy.
+An (ironic) attempt to write down random things I like.
 
 It's dumb Enjoy.
